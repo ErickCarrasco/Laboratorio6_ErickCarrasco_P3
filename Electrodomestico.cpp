@@ -8,7 +8,7 @@ Electrodomestico::Electrodomestico(){
 
 }
 
-Electrodomestico::Electrodomestico(string tipo){
+Electrodomestico::Electrodomestico(string tipo, string nombre, double peso, string fragil):Producto(nombre, peso, fragil){
     this->tipo=tipo;
 }
 

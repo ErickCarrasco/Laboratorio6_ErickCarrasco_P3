@@ -13,7 +13,7 @@ class Electrodomestico : public Producto{
     protected:
         string tipo;
     public:
-        Electrodomestico(string);
+        Electrodomestico(string, string, double, string);
         Electrodomestico();
         string getTipo();
         string fragil();

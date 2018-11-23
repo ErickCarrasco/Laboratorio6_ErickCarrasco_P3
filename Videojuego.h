@@ -10,7 +10,7 @@ class Videojuego : public Electrodomestico{
 	protected:
 		string company;
 	public:
-		Videojuego(string, string);
+		Videojuego(string, string, string, double, string);
 		string getCompany();
 		void setCompany(string);
 		string getType();

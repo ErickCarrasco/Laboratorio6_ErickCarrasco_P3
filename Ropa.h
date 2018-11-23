@@ -11,7 +11,7 @@ class Ropa : Producto{
 		string type;
 	public:
 		Ropa();
-		Ropa(string);
+		Ropa(string, string, double, string);
 		string getType();
 		void setType(string);
 		string fragil();

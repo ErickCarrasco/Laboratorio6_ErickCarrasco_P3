@@ -10,7 +10,7 @@ class Computador : public Electrodomestico{
 	protected:
 		string sistema;
 	public:
-		Computador(string, string);
+		Computador(string, string, string, double, string);
 		string getSistema();
 		void setSistema(string);
 		string getType();

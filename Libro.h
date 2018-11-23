@@ -11,7 +11,7 @@ class Libro : public Producto{
 		string codigo;
 	public:
 		Libro();
-		Libro(string);
+		Libro(string, string, double, string);
 		string getCodigo();
 		void setCodigo(string);
 		string fragil();

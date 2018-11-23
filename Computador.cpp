@@ -14,7 +14,7 @@ string Computador::getType(){
 	return this->tipo;
 }
 
-Computador::Computador(string sistema, string tipo):Electrodomestico(tipo){
+Computador::Computador(string sistema, string tipo, string nombre, double peso, string fragil ):Electrodomestico(tipo, nombre, peso, fragil){
 	this->sistema=sistema;
 }
 

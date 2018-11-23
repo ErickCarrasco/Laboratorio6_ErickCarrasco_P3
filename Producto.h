@@ -16,7 +16,7 @@ class Producto{
         double peso;
         string fragil;
     public:
-        Producto(string,double,bool);
+        Producto(string,double,string);
         Producto();
         string getNombre();
         void setNombre(string);

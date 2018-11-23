@@ -14,7 +14,7 @@ string Videojuego::getType(){
 	return this->tipo;
 }
 
-Videojuego::Videojuego(string company, string tipo):Electrodomestico(tipo){
+Videojuego::Videojuego(string company, string tipo, string nombre, double peso, string fragil ):Electrodomestico(tipo, nombre, peso, fragil){
 	this->company=company;
 }
 

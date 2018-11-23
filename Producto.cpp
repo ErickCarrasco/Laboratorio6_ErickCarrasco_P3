@@ -1,6 +1,6 @@
 #include "Producto.h"
 
-Producto::Producto(string nombre,double peso,bool fragil){
+Producto::Producto(string nombre,double peso,string fragil){
     this->nombre=nombre;
     this->peso=peso;
     this->fragil=fragil;
