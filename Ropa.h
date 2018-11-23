@@ -6,7 +6,7 @@
 #include <string>
 using std::string;
 
-class Ropa : Producto{
+class Ropa : public Producto{
 	private:
 		string type;
 	public:

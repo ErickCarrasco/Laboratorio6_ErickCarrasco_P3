@@ -21,6 +21,8 @@ using std::vector;
 
 Caja*** crearAlmacen();
 
+void free(Caja***&);
+
 int main(){
 	cout<<"Bienvenido al AMAZON"<<endl;
 	cout<<endl;
@@ -234,8 +236,79 @@ int main(){
     				}
     			}
     			if (selectionM==2){
-    				/* code */
+    				for (int i = 0; i < 10; i++){
+    					for (int j = 0; j < 10; j++){
+    						double registro=almacen[i][j]->getPesototal();
+    						if(registro>=0 && registro<100){
+    							cout<<0;
+    						}
+    						if (registro>=100 && registro<200)
+    						{
+    							cout<<1;
+    						}
+    						if (registro>=200 && registro<300)
+    						{
+    							cout<<2;
+    						}
+    						if (registro>=300 && registro<400)
+    						{
+    							cout<<3;
+    						}
+    						if (registro>=400 && registro<500)
+    						{
+    							cout<<4;
+    						}
+    						if (registro>=500 && registro<600)
+    						{
+    							cout<<5;
+    						}
+    						if (registro>=600 && registro<700)
+    						{
+    							cout<<6;
+    						}
+    						if (registro>=700 && registro<800)
+    						{
+    							cout<<7;
+    						}
+    						if (registro>=800 && registro<900)
+    						{
+    							cout<<8;
+    						}
+    						if (registro>=900)
+    						{
+    							cout<<9;
+    						}
+    					}//Fin for 1
+    					cout<<endl;
+    				}//Fin for 2
+    			}//Fin selection 2
+
+    			if (selectionM==3)
+    			{
+    				int x;
+    				int y;
+    				cout<<"Ingrese la posicion en x (no mayor que 10) "<<endl;
+    				cin>>x;
+    				cout<<"Ingrese la posicion en y (no mayor que 10) "<<endl;
+    				cin>>y;
+    				while(x<0 || x>9 || y<0 || y>9){
+    					cout<<"Se encontro un error en los registros.."<<endl;
+    					cout<<endl;
+    					cout<<"Ingrese la posicion en x (no mayor que 10) "<<endl;
+    					cin>>x;
+    					cout<<"Ingrese la posicion en y (no mayor que 10) "<<endl;
+    					cin>>y;
+    				}
+    				double pesoX = almacen[x][y]->getPesototal();
+    				cout<<"Peso: "<< pesoX<<endl;
+    				cout<<"Fragil: "<<almacen[x][y]->getFragile()<<endl;
+    				for (int i = 0; i < almacen[x][y]->getLista().size(); ++i)
+    				{
+    					cout<<almacen[x][y]->getLista()[i]->getNombre()<<endl;
+    				}
     			}
+
+
 
     		}
     		break;
@@ -243,6 +316,7 @@ int main(){
 
     		case 3:
     		{
+    			free(almacen);
     			value=1000;
     		}
     		break;
@@ -264,4 +338,22 @@ Caja*** crearAlmacen(){
         }
     }
     return almacen;
+}
+
+void free(Caja***& tablero){
+  if(tablero!=NULL){
+    /*for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            delete[] tablero;
+            tablero[i][j]=NULL; 
+        }
+    }*/
+
+    for(int i=0;i<10;i++){
+        delete[] tablero[i];
+        tablero[i]=NULL;
+    }
+    delete[] tablero;
+    tablero=NULL;
+  }
 }
