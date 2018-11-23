@@ -18,3 +18,4 @@ class Ropa : Producto{
 		~Ropa();
 	
 };
+#endif

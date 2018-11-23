@@ -20,7 +20,7 @@ string Electrodomestico::getTipo(){
 }
 
 string Electrodomestico::fragil(){
-	string retVal="No fragil";
+	string retVal="Fragil";
 	return retVal;
 }
 

@@ -4,9 +4,9 @@
 #include <string>
 using std::string;
 
-#include "Electodomestico"
+#include "Electrodomestico.h"
 
-class Videojuego : public Electodomestico{
+class Videojuego : public Electrodomestico{
 	protected:
 		string company;
 	public:
